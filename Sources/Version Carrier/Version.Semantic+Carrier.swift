@@ -1,5 +1,5 @@
 public import Version
-public import Carrier
+public import Carrier_Protocol
 
 extension Version.Semantic: Carrier.`Protocol` {
 

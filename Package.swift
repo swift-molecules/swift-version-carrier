@@ -18,23 +18,20 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-molecules/swift-version.git", branch: "main"),
+        .package(url: "https://github.com/swift-atoms/swift-version.git", branch: "main"),
         .package(url: "https://github.com/swift-atoms/swift-carrier.git", branch: "main"),
-        .package(url: "https://github.com/swift-molecules/swift-version-time.git", branch: "main"),
     ],
     targets: [
         .target(
             name: "Version Carrier",
             dependencies: [
                 .product(name: "Version", package: "swift-version"),
-                .product(name: "Carrier", package: "swift-carrier"),
-                .product(name: "Version Time", package: "swift-version-time"),
+                .product(name: "Carrier Protocol", package: "swift-carrier"),
             ]
         ),
         .testTarget(
             name: "Version Carrier Tests",
             dependencies: [
-                "Version Carrier"
             ]
         ),
     ],
