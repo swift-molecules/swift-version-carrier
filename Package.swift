@@ -18,7 +18,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-atoms/swift-version.git", branch: "main"),
+        .package(url: "https://github.com/swift-atoms/swift-version.git", branch: "main", traits: ["Calendar"]),
         .package(url: "https://github.com/swift-atoms/swift-carrier.git", branch: "main"),
     ],
     targets: [
@@ -26,7 +26,7 @@ let package = Package(
             name: "Version Carrier",
             dependencies: [
                 .product(name: "Version", package: "swift-version"),
-                .product(name: "Carrier Protocol", package: "swift-carrier"),
+                .product(name: "Carrier", package: "swift-carrier"),
             ]
         ),
         .testTarget(
