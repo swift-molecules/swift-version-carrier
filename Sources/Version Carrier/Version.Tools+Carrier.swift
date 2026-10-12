@@ -1,5 +1,5 @@
-public import Version
 public import Carrier
+public import Version
 
 extension Version.Tools: Carrier.`Protocol` {
 
